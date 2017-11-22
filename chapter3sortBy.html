@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sortBy</title>
+</head>
+<body>
+	
+</body>
+<script>
+	'use strict'
+	//Vanilla JS sort
+	var array = [1,0,6,99,3,8,2,16,234];
+	array.sort(function(value1, value2) {
+		return value1 - value2;
+	});
+	console.log('Vanilla JS sort:' + array);
+	//ES6 sort
+	var array2 = [18,19,23,42,4,666,999,123,3,1,0,6,4];
+	array2.sort((value1, value2) => value1 - value2);
+	console.log('ES6 sort:' + array2);
+
+</script>
+</html>
