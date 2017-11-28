@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise, chapter 4</title>
+	<style>
+		.title {
+			font-size:20px;
+			text-transform: uppercase;
+		}
+	</style>
+	<script src="assert.js"></script>
+	<link rel="stylesheet" type="text/css" href="assert.css">
+</head>
+<body>
+	<div class="title">1.</div>
+	<script>
+		function sum(){
+			var sum = 0;
+			for (var i = 0; i < arguments.length; i++) {
+				sum += arguments[i];
+			}
+			return sum;
+		}
+
+		function sum2(...rest) {
+			var sum = 0;
+			for (var i = 0; i < rest.length; i++) {
+				sum += rest[i]
+			}
+			return sum;
+		}
+
+		assert(sum2(1,2,3) === 6, 'Sum (by using es6 ...rest) of first three numbers is 6');
+		assert(sum2(1,2,3,4) === 10, 'Sum (by using es6 ...rest) of first four numbers is 10');
+	</script>
+	<div class="title">2.</div>
+</body>
+</html>
